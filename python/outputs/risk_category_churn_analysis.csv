@@ -1,0 +1,5 @@
+risk_category,customers,churned,churn_rate_pct
+High,1197,533,44.53
+Low,2658,119,4.48
+Medium,1943,406,20.9
+Very High,1245,811,65.14

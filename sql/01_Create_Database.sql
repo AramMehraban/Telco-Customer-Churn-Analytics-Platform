@@ -1,0 +1,17 @@
+
+IF DB_ID('CustomerChurnDW') IS NOT NULL
+BEGIN
+    ALTER DATABASE CustomerChurnDW
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE CustomerChurnDW;
+END
+GO
+
+
+CREATE DATABASE CustomerChurnDW;
+GO
+
+
+USE CustomerChurnDW;
+GO

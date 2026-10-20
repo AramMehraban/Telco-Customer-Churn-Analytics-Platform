@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Temporary files and logs
+*.log
+*.tmp
+
+# Backup scripts
+app_backup*.py
+
+# Desktop File
+desktop.ini
+
+# Extra files
+extra_files/
+docs/
+.vs/

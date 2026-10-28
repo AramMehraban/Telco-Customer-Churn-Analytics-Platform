@@ -428,7 +428,7 @@ Data analytics portfolio project focused on:
 
 - [GitHub](https://github.com/AramMehraban)
 - [LinkedIn](https://linkedin.com/in/AramMehraban)
-- [Kaggle](https://kaggle.com/aramehr)
+
 
 ## License
 

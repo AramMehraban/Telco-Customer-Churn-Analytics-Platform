@@ -1,363 +1,303 @@
 # Telco Customer Churn Analytics Platform
 
-**End-to-End Data Analytics Portfolio Project**
+**End-to-End Customer Churn Analytics | Python · SQL · Data Visualization · Business Intelligence**
 
-[🚀 Live Dashboard](https://telco-customer-churn-analysis-platform.streamlit.app/) | [📂 GitHub Repository](https://github.com/AramMehraban/Telco-Customer-Churn-Analytics-Platform)
+[🚀 Live Dashboard](https://telco-customer-churn-analysis-platform.streamlit.app/) · [📂 GitHub Repository](https://github.com/AramMehraban/Telco-Customer-Churn-Analytics-Platform)
 
-An end-to-end customer churn analytics portfolio project built with Python, SQL, Jupyter Notebook, and Streamlit. This project analyzes customer retention, contract types, service usage, churn risk indicators, and revenue exposure to support data-driven business decisions.
+An end-to-end data analytics portfolio project exploring customer churn, retention patterns, customer segments, and revenue exposure in a telecommunications dataset.
+
+The project combines Python-based data analysis, Jupyter Notebooks, SQL data workflows, and an interactive Streamlit dashboard to turn customer data into actionable business insights.
 
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Project Overview](#project-overview)
 - [Business Objectives](#business-objectives)
 - [Business Questions](#business-questions)
 - [Key Findings](#key-findings)
 - [Dashboard](#dashboard)
-- [Project Workflow](#project-workflow)
+- [Analytical Workflow](#analytical-workflow)
 - [Technology Stack](#technology-stack)
 - [Repository Structure](#repository-structure)
-- [Getting Started](#getting-started)
-- [Running the Dashboard](#running-the-dashboard)
-- [Running the Analysis Scripts](#running-the-analysis-scripts)
-- [Deployment](#deployment)
-- [Business Value](#business-value)
+- [SQL Analytics](#sql-analytics)
+- [Data and Methodology](#data-and-methodology)
 - [Limitations](#limitations)
 - [Future Improvements](#future-improvements)
 - [Author](#author)
+- [License](#license)
 
 ---
 
-## Overview
+## Project Overview
 
-Customer churn is a major challenge for subscription-based businesses. Understanding why customers leave helps organizations identify vulnerable customer segments, improve retention strategies, and make better business decisions.
+Customer churn is an important business challenge for subscription-based companies. Understanding which customer segments have higher observed churn rates can help businesses prioritize retention analysis and develop better customer engagement strategies.
 
-This project presents an end-to-end customer churn analytics workflow, from data preparation and exploratory analysis to feature engineering, churn investigation, revenue impact assessment, and interactive dashboard development.
+This project explores customer behavior and churn patterns through a structured analytical workflow, including:
 
-The project combines Python-based analytics, SQL workflows, Jupyter notebooks, and an interactive Streamlit dashboard to communicate findings in a business-oriented format.
+- Data understanding and quality assessment
+- Data cleaning and exploratory data analysis (EDA)
+- Feature engineering and customer segmentation
+- Churn analysis across customer and service categories
+- Revenue impact analysis
+- SQL-based analytical reporting
+- Business insight communication and dashboard visualization
 
-**Explore the live application:** [Telco Customer Churn Analytics Dashboard](https://telco-customer-churn-analysis-platform.streamlit.app/)
+The objective is to demonstrate how data analysis can support business decisions, from preparing raw data to communicating findings in a clear and structured format.
 
 ## Business Objectives
 
-- Measure customer churn and compare churn rates across customer segments.
-- Identify customer characteristics associated with higher churn.
-- Investigate relationships between churn, contract type, tenure, internet service, and payment method.
-- Engineer additional analytical features to support segmentation and risk assessment.
-- Examine historical charges associated with customers who churned.
-- Present analytical results through an interactive dashboard.
-- Translate findings into practical, measurable customer-retention recommendations.
+- Measure the overall customer churn rate.
+- Compare churn across contract types, internet services, and payment methods.
+- Investigate the relationship between churn, customer tenure, and monthly charges.
+- Develop analytical features for customer segmentation.
+- Examine historical charges associated with churned customers.
+- Identify customer segments that may warrant further retention investigation.
+- Communicate findings through visualizations, SQL outputs, and an interactive dashboard.
 
 ## Business Questions
 
-This project addresses the following questions:
-
-1. What percentage of customers have churned?
-2. How does churn vary across month-to-month, one-year, and two-year contracts?
-3. Which internet service segments have higher observed churn rates?
-4. How does churn differ by payment method?
+1. What proportion of customers have churned?
+2. How does churn differ between month-to-month, one-year, and two-year contracts?
+3. Which internet service categories have higher observed churn rates?
+4. How does churn vary by payment method?
 5. How are customer tenure and monthly charges associated with churn?
-6. Which customer segments may warrant further retention analysis?
-7. What historical charges are associated with customers who have churned?
-8. How can the findings inform customer-retention strategies?
+6. Which customer segments merit further investigation?
+7. What historical charges are associated with customers who churned?
+8. How can these findings inform measurable customer-retention initiatives?
 
 ## Key Findings
 
-The current analysis covers **7,043 customers**, including **1,869 customers who churned**.
+The current project analysis reports **7,043 customers**, including **1,869 customers who churned**.
 
-| Metric | Result |
-|---|---:|
-| Total customers analyzed | 7,043 |
-| Churned customers | 1,869 |
-| Overall churn rate | 26.54% |
-| Month-to-month contract churn rate | 42.71% |
-| One-year contract churn rate | 11.27% |
-| Two-year contract churn rate | 2.83% |
-| Fiber optic customer churn rate | 41.89% |
-| Electronic check customer churn rate | 45.29% |
+| Metric                               | Reported result |
+| ------------------------------------ | --------------: |
+| Total customers analyzed             |           7,043 |
+| Churned customers                    |           1,869 |
+| Overall churn rate                   |          26.54% |
+| Month-to-month contract churn rate   |          42.71% |
+| One-year contract churn rate         |          11.27% |
+| Two-year contract churn rate         |           2.83% |
+| Fiber optic customer churn rate      |          41.89% |
+| Electronic check customer churn rate |          45.29% |
+
+*These figures are reported from the current project analysis and should be interpreted in the context of the analyzed dataset.*
 
 ### Business Interpretation
 
-- **Contract type:** Month-to-month customers show a substantially higher observed churn rate than customers on longer-term contracts.
-- **Internet service:** Customers with fiber optic service show a higher observed churn rate than the other service groups in this analysis.
-- **Payment method:** Customers using electronic checks have a higher observed churn rate in the analyzed dataset.
-- **Retention opportunities:** These segments may be useful starting points for further investigation and targeted retention experiments.
+**Contract type:** Month-to-month customers show a substantially higher observed churn rate than customers with longer-term contracts. This segment may be worth prioritizing for further retention analysis.
 
-These findings describe patterns in the analyzed dataset. They do not establish causation or prove that a particular contract, service, or payment method causes customer churn.
+**Internet service:** The fiber optic segment has a higher observed churn rate in this dataset. Further investigation could examine customer satisfaction, service experience, pricing, and other relevant factors.
+
+**Payment method:** Customers paying by electronic check show a higher observed churn rate. This association may help guide additional investigation into payment experience and customer behavior.
+
+**Retention opportunities:** These patterns can help identify segments for further analysis and carefully measured retention experiments.
+
+These are descriptive findings. They do not establish that contract type, internet service, or payment method causes churn.
 
 ## Dashboard
 
-The interactive dashboard presents analytical results in a visual, accessible format.
+Explore the interactive dashboard:
 
 **[🚀 Open the Live Streamlit Dashboard](https://telco-customer-churn-analysis-platform.streamlit.app/)**
 
-The project is designed to support exploration of customer churn patterns, segment comparisons, customer risk indicators, and revenue-related metrics.
+The project includes a dashboard component intended to communicate customer churn patterns and business metrics in an accessible visual format.
 
-Dashboard functionality depends on the deployed version of the application.
+The availability and functionality of individual dashboard features depend on the currently deployed application version.
 
-## Project Workflow
+## Analytical Workflow
 
-The project follows a structured analytics workflow.
+The project is organized into eight planned analytical stages.
 
 ### 1. Data Understanding
 
-- Inspect the dataset and its fields.
+- Inspect the source dataset and its structure.
 - Review customer characteristics and data types.
-- Understand the target variable and relevant business dimensions.
+- Identify the churn target and relevant business dimensions.
 
 ### 2. Data Cleaning
 
 - Prepare the data for analysis.
-- Address data-quality issues.
-- Ensure that analytical fields are suitable for downstream calculations.
+- Investigate data-quality issues.
+- Produce cleaned datasets for downstream analysis.
 
-### 3. Exploratory Data Analysis (EDA)
+### 3. Exploratory Data Analysis
 
-- Examine customer distributions and characteristics.
-- Compare churn rates across relevant categories.
-- Investigate patterns in tenure, monthly charges, contracts, and services.
+- Explore customer distributions and characteristics.
+- Compare churn rates across categories.
+- Investigate patterns involving tenure, monthly charges, contracts, and services.
 
 ### 4. Feature Engineering
 
-- Create additional variables for customer analysis.
+- Create additional analytical variables.
 - Prepare derived features for segmentation and risk assessment.
-- Generate processed datasets for subsequent analytical steps.
+- Save processed datasets for subsequent analysis.
 
 ### 5. Customer Segmentation
 
 - Compare customer groups.
-- Evaluate observed churn differences across segments.
-- Identify groups that merit additional investigation.
+- Examine differences in observed churn rates.
+- Identify segments for further investigation.
 
 ### 6. Churn Analysis
 
 - Analyze churn by contract type.
-- Compare churn across internet service categories.
+- Compare internet service categories.
 - Investigate payment-method differences.
-- Examine relationships between churn and customer characteristics.
+- Explore relationships between churn and customer characteristics.
 
 ### 7. Revenue Impact Analysis
 
-- Examine monthly charges associated with customers who churned.
-- Review historical charges for churned customers.
-- Distinguish historical amounts from estimates of potential revenue exposure.
+- Examine monthly charges associated with churned customers.
+- Review historical charges.
+- Distinguish observed financial amounts from estimates of potential revenue exposure.
 
-### 8. Final Insights
+### 8. Final Insights and Recommendations
 
 - Consolidate the main analytical findings.
-- Develop business-oriented interpretations.
-- Identify potential customer-retention initiatives for future testing.
+- Translate results into business-oriented interpretations.
+- Identify retention initiatives that could be tested and measured.
 
 ## Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| Python | Data analysis and processing |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical operations |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical visualization |
-| Plotly | Interactive charts |
-| Jupyter Notebook | Exploratory analysis and documentation |
-| Streamlit | Interactive web dashboard |
-| SQL | Data querying and analytical workflows |
-| Git | Version control |
-| GitHub | Source-code hosting and portfolio publishing |
+| Technology             | Purpose                                              |
+| ---------------------- | ---------------------------------------------------- |
+| Python                 | Data analysis and processing                         |
+| Pandas                 | Data manipulation and analysis                       |
+| NumPy                  | Numerical operations                                 |
+| Matplotlib and Seaborn | Data visualization and exploratory analysis          |
+| Plotly                 | Interactive visualizations                           |
+| Jupyter Notebook       | Analysis workflow and documentation                  |
+| SQL                    | Data preparation, querying, and analytical reporting |
+| Streamlit              | Interactive dashboard                                |
+| Git and GitHub         | Version control and portfolio publishing             |
 
 ## Repository Structure
 
-The repository is organized around the dashboard, data, analysis scripts, notebooks, SQL workflows, and supporting project documentation.
+The project repository contains the following main areas:
 
 ```text
 Telco-Customer-Churn-Analytics-Platform/
 │
-├── app.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 ├── .gitignore
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
-│
 ├── docs/
 ├── powerbi/
 ├── screenshots/
 │
 ├── python/
+│   ├── data/
+│   │   ├── raw/
+│   │   │   └── Telco-Customer-Churn.csv
+│   │   └── processed/
+│   │       ├── churn_analysis_summary.csv
+│   │       ├── customer_churn_clean.csv
+│   │       ├── customer_churn_features.csv
+│   │       └── telco_churn_clean.csv
+│   │
 │   ├── notebooks/
-│   ├── outputs/
-│   └── scripts/
-│       ├── 01_eda.py
-│       ├── 02_feature_engineering.py
-│       ├── 03_churn_analysis.py
-│       ├── 04_revenue_impact_analysis.py
-│       ├── 05_final_insights.py
-│       └── common.py
+│   │   ├── 01_Data_Understanding.ipynb
+│   │   ├── 02_Data_Cleaning.ipynb
+│   │   ├── 03_EDA.ipynb
+│   │   ├── 04_Feature_Engineering.ipynb
+│   │   ├── 05_Customer_Segmentation.ipynb
+│   │   ├── 06_Churn_Analysis.ipynb
+│   │   └── 07_Revenue_Impact_Analysis.ipynb
+│   │
+│   └── outputs/
+│       └── tables/
 │
 └── sql/
+    ├── Database and schema creation
+    ├── Raw data loading
+    ├── ETL and data-quality checks
+    ├── Dimension and fact table loading
+    └── Analytical views and reporting queries
 ```
 
-This is a representative structure. The files and folders available in the GitHub repository are the source of truth for the published project.
+This is a simplified overview of the project structure. Refer to the repository for the actual files and their current implementation status.
 
-## Getting Started
+## SQL Analytics
 
-### Prerequisites
+The SQL component contains scripts covering database preparation, data loading, cleaning, dimensional modeling, and analytical views.
 
-Install the following before running the project locally:
+The workflow includes:
 
-- Python
-- Git
-- A code editor, such as Visual Studio Code
-- A web browser for the Streamlit dashboard
+- Database and schema creation
+- Raw table creation and data loading
+- ETL cleaning and data-quality reporting
+- Dimension and fact table creation
+- Foreign-key relationships
+- Analytical views for churn, contracts, payments, internet services, revenue, customer risk, and executive summaries
+- Queries for testing analytical views
 
-### 1. Clone the Repository
+The SQL work complements the Python analysis by organizing data preparation and business reporting into reusable database operations.
 
-```bash
-git clone https://github.com/AramMehraban/Telco-Customer-Churn-Analytics-Platform.git
-cd Telco-Customer-Churn-Analytics-Platform
-```
+## Data and Methodology
 
-### 2. Create a Virtual Environment
+The analysis uses the Telco Customer Churn dataset stored in the project's raw-data directory. Processed datasets and analytical outputs are maintained separately from the raw input.
 
-On Windows PowerShell:
+The analytical approach emphasizes descriptive statistics, segment comparisons, and business interpretation.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
+The reported churn rate is calculated as:
 
-If PowerShell blocks script execution, review your local execution-policy settings before proceeding.
+[
+\text{Churn Rate} =
+\frac{\text{Churned Customers}}{\text{Total Customers}}
+\times 100
+]
 
-### 3. Install Dependencies
+Segment-level churn rates should be calculated using the number of churned customers divided by the total customers in the respective segment.
 
-```powershell
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-### 4. Run the Dashboard
-
-From the repository root:
-
-```powershell
-python -m streamlit run app.py
-```
-
-Open the local address displayed in the terminal. Streamlit commonly uses:
-
-```text
-http://localhost:8501
-```
-
-### 5. Explore the Analysis Scripts
-
-The `python/scripts/` directory contains the project's analysis workflow.
-
-Before running a script, confirm that its required input files exist and that its paths are configured relative to the repository structure.
-
-## Running the Analysis Scripts
-
-Run the analysis scripts from the repository root, in the intended order:
-
-```powershell
-python .\python\scripts\01_eda.py
-python .\python\scripts\02_feature_engineering.py
-python .\python\scripts\03_churn_analysis.py
-python .\python\scripts\04_revenue_impact_analysis.py
-python .\python\scripts\05_final_insights.py
-```
-
-The scripts may create processed datasets, analytical outputs, or reports. Check each script's configuration and output messages to confirm the actual input and output paths.
-
-## Deployment
-
-The interactive dashboard is hosted through Streamlit Community Cloud.
-
-- **Live application:** [Telco Customer Churn Analytics Dashboard](https://telco-customer-churn-analysis-platform.streamlit.app/)
-- **Source code:** [GitHub Repository](https://github.com/AramMehraban/Telco-Customer-Churn-Analytics-Platform)
-
-The application is configured to run from `app.py`, with Python dependencies specified in `requirements.txt`.
-
-For future updates:
-
-1. Make and test changes locally.
-2. Commit the changes to Git.
-3. Push the changes to the GitHub `main` branch.
-4. Check the Streamlit deployment logs if the application fails to update.
-5. Verify the deployed dashboard after each significant change.
-
-## Business Value
-
-The analysis provides a starting point for understanding customer churn and identifying groups that may benefit from additional retention investigation.
-
-Potential business applications include:
-
-- Monitoring churn rates across customer segments.
-- Investigating retention opportunities among month-to-month customers.
-- Evaluating service and payment-method differences.
-- Developing and testing targeted retention offers.
-- Tracking retention campaign outcomes against a baseline.
-- Supporting communication between analytics teams and business stakeholders.
-
-Any proposed retention intervention should be evaluated using measurable outcomes rather than assumptions based on segment-level correlations alone.
+Historical customer charges, monthly charges, and potential future revenue exposure represent different concepts and should not be treated as interchangeable.
 
 ## Limitations
 
-- **Descriptive analysis:** Observed differences do not establish causal relationships.
-- **Risk assessment:** Heuristic risk scores are not calibrated probabilities of churn.
-- **Historical charges:** Total charges accumulated before churn are not equivalent to future revenue or customer lifetime value.
-- **Revenue exposure:** Monthly charges associated with churned customers represent an estimate of exposure at churn, not current recurring revenue.
-- **Retention strategy:** Recommendations require validation with further analysis and, where possible, controlled experiments.
+- **Descriptive analysis:** Observed relationships do not establish causation.
+- **Risk assessment:** A heuristic risk score is not a calibrated probability of churn.
+- **Historical charges:** Total charges accumulated before churn do not represent future revenue or customer lifetime value.
+- **Revenue exposure:** Monthly charges associated with churned customers are not equivalent to current recurring revenue.
+- **Retention recommendations:** Proposed actions require further validation and, where possible, controlled experiments.
 - **Generalizability:** Results reflect the analyzed dataset and may not represent every telecommunications business.
+- **Reproducibility:** Local execution depends on the availability of the relevant project files, dependencies, and configuration.
 
 ## Future Improvements
 
-Potential extensions include:
-
-- Developing and evaluating a predictive churn model.
-- Comparing model performance with suitable classification metrics.
-- Improving customer risk scoring through calibration and validation.
-- Adding filters and additional drill-down capabilities to the dashboard.
-- Automating data-quality checks.
-- Expanding SQL-based analytical reporting.
-- Tracking retention initiatives and their measurable business outcomes.
-- Adding dashboard screenshots and further project documentation.
+- Develop and validate a predictive churn classification model.
+- Evaluate model performance using appropriate classification metrics.
+- Improve risk scoring through validation and probability calibration.
+- Expand interactive dashboard filters and drill-down analysis.
+- Automate data-quality checks and analytical reporting.
+- Strengthen the reproducibility of the Python and SQL workflows.
+- Add dashboard screenshots and implementation documentation.
+- Evaluate retention strategies against measurable business outcomes.
 
 ## Author
 
-Created as a portfolio project demonstrating skills in:
+**Aram Mehraban**
 
-- Data analytics
-- Data cleaning and feature engineering
-- Exploratory data analysis
-- SQL and analytical workflows
-- Customer churn investigation
-- Data visualization
-- Interactive dashboard development
-- Business insight communication
-- Git and GitHub
+Data analytics portfolio project focused on:
 
-## Project Links
+- Data cleaning and exploratory data analysis
+- Feature engineering and customer segmentation
+- SQL and analytical reporting
+- Customer churn and revenue analysis
+- Data visualization and dashboard development
+- Translating analytical results into business insights
 
-- **Live Dashboard:** https://telco-customer-churn-analysis-platform.streamlit.app/
-- **GitHub Repository:** https://github.com/AramMehraban/Telco-Customer-Churn-Analytics-Platform
+**Portfolio links**
 
----
+- [GitHub](https://github.com/AramMehraban)
+- [LinkedIn](https://linkedin.com/in/AramMehraban)
+- [Kaggle](https://kaggle.com/aramehr)
 
-*This project is intended for portfolio and learning purposes. Findings and recommendations should be interpreted within the context of the analyzed dataset.*
-
-
---- 
-## License & Copyright
+## License
 
 **Copyright © 2026 Aram Mehraban. All rights reserved.**
 
-This project, including its original source code, scripts, documentation, project structure, and visualizations, is the intellectual property of Aram Mehraban, unless otherwise stated.
+Unless otherwise stated, the original source code, documentation, project structure, and original visualizations are provided for portfolio review and personal learning. Reproduction, modification, redistribution, republication, or commercial use of original materials requires prior written permission, except where permitted by applicable law.
 
-You may view this repository for personal learning, evaluation, and portfolio review. Copying, reproducing, modifying, redistributing, republishing, or commercially using the original materials without prior written permission is not permitted, except as permitted by applicable law.
-
-Third-party libraries, datasets, and other materials remain subject to their respective licenses and terms of use.
-
-**No license to reuse the original materials is granted by making this repository publicly available.**
+Third-party datasets, libraries, and other materials remain subject to their respective licenses and terms of use. Making this repository publicly available does not grant a general license to reuse its original materials.
